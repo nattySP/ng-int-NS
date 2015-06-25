@@ -1,22 +1,21 @@
 /* app css stylesheet */
+body {
+  height: 1000px;
+  width: 100%;
+  background: #B2B2B2;
+  font-family: avenir-book;
+}
 
 .menu {
   list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
+  border-bottom: 0.1em solid #FFF;
+  /*margin-bottom: 2em;*/
   padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
 }
 
 .menu > li {
   display: inline;
+  text-decoration: none;
 }
 
 .menu > li:before {
@@ -31,12 +30,16 @@
 
 #cy {
     height: 650px;
-    width: 100%;
-    border: 2px solid #662244;
+    width: 75%;
+    border-radius: 3px;
     position: relative;
-    clear: both;
+    margin: 10px;
+    float: left;
     background-image: url(./assets/bg-neutral.jpg);
     background-size: cover; 
 }
 
+.info-container {
+  background-color: #FFF;
+}
 

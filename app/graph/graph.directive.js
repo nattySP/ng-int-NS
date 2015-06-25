@@ -1,20 +1,16 @@
 angular
     .module('cytoscapeSample')
     .directive('cytoscape', function($rootScope) {
-        // graph visualisation by - https://github.com/cytoscape/cytoscape.js
         return {
             restrict: 'E',
             template :'<div id="cy"></div>',
             replace: true,
             scope: {
-                // data objects to be passed as an attributes - for nodes and edges
                 cyData: '=',
                 cyEdges: '=',
                 cyGraph: '=',
                 cySelection: '=',
                 cyPath: '=',
-                // controller function to be triggered when clicking on a node
-                cyClick:'&'
             },
             link: function(scope, element, attrs, fn) {
                 console.log('link function called ', scope.cySelection);
@@ -37,27 +33,21 @@ angular
                 //     return nodes; 
 
                 // }
-                // graph  build
-                scope.buildGraph = function(){ // will be triggered on an event broadcast
-                    // initialize data object
-                    console.log('buildGraph called');
+
+                scope.buildGraph = function(){ 
+
                     scope.elements = {};
                     scope.elements.nodes = scope.cyData;
                     scope.elements.edges = scope.cyEdges;
 
 
-                    // graph  initialization
-                    // use object's properties as properties using: data(propertyName)
-                    // check Cytoscapes site for much more data, options, designs etc
-                    // http://cytoscape.github.io/cytoscape.js/
-                    // here are just some basic options
                     $('#cy').cytoscape({
                         layout: {
                             name: 'circle',
-                            fit: true, // whether to fit the viewport to the graph
-                            ready: undefined, // callback on layoutready
-                            stop: undefined, // callback on layoutstop
-                            padding: 10, // the padding on fit
+                            fit: true, 
+                            ready: undefined, 
+                            stop: undefined, 
+                            padding: 10, 
                         },
                         style: cytoscape.stylesheet()
                             .selector('node')
@@ -93,25 +83,14 @@ angular
                             ready: function(){
                             window.cy = this;
 
-                            // cy.elements().unselectify();
-
-                            // Event listeners
-                            // with sample calling to the controller function as passed as an attribute
-                            // cy.on('click', 'node', function(e){
-                            //     var evtTarget = e.cyTarget;
-                            //     var nodeId = evtTarget.id();
-                            //     scope.cyClick({value:nodeId});
-                            // });
-
                             cy.load(scope.elements);
                         }
                     });
 
-                }; // end buildGraph()
+                };
 
                 scope.buildGraph(); 
 
-                //build selection
                 scope.buildSelection = function() {
                     cy.$(':selected').unselect(); 
                     var selectNodes = _.filter(scope.elements.nodes, function(node) {

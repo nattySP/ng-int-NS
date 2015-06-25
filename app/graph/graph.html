@@ -1,8 +1,12 @@
-<input type="text" ng-model="source_node" placeholder="Enter Start Node"/>
-<input type="text" ng-model="target_node" placeholder="Enter End Node"/>
-<button ng-click="findPath(source_node, target_node)">button</button>
-<div ng-if="dataEntered">
-  The shortest distance between {{source_node}} and {{target_node}}
-  is {{shortestPath}} with a length of {{shortestPathDistance}}
+<div class="input-container">
+  <input type="text" ng-model="source_node" placeholder="Enter Start Node"/>
+  <input type="text" ng-model="target_node" placeholder="Enter End Node"/>
+  <button ng-click="findPath(source_node, target_node)">button</button>
 </div>
 <cytoscape cy-data="mapData" cy-graph="graph" cy-edges="edgeData" cy-click="doClick(value)" cy-selection="selection" cy-path="pathEdges"></cytoscape>
+<div class="info-container">  
+  <div ng-if="dataEntered">
+    The shortest path from {{source_node}} and {{target_node}}
+    is {{shortestPath}} with a length of {{shortestPathDistance}}
+  </div>
+</div>

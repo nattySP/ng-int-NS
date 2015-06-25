@@ -11,14 +11,6 @@ angular
         $scope.mapData = CytoscapeFactory.mapData; 
         $scope.edgeData = CytoscapeFactory.edgeData; 
 
-    
-        $scope.doClick = function(value)
-        {
-
-            // sample just passes the object's ID then output it to the console and to an alert
-            console.log(value);
-        };
-
 
         $scope.findPath = function(source, target) {
             var dijkstras = new Dijkstras($scope.graph);
