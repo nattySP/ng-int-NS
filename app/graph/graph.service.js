@@ -24,13 +24,21 @@ angular
                 'data':{
                         id: 'n0',
                         name: '0',
-                    }
+                    }, 
+                position: {
+                    x:0,
+                    y:325
+                }
             }, 
             {
                 group: 'nodes',
                 'data':{
                         id: 'n1',
                         name: '1',
+                    },
+                    position: {
+                        x:190,
+                        y:0
                     }
             }, 
             {
@@ -38,6 +46,10 @@ angular
                 'data':{
                         id: 'n2',
                         name: '2',
+                    },
+                    position: {
+                        x: 380,
+                        y: 0
                     }
             }, 
             {
@@ -45,6 +57,10 @@ angular
                 'data':{
                         id: 'n3',
                         name: '3',
+                    },
+                    position: {
+                        x:570,
+                        y:0
                     }
             }, 
             {
@@ -52,6 +68,10 @@ angular
                 'data':{
                         id: 'n4',
                         name: '4',
+                    },
+                    position: {
+                        x:760,
+                        y:325
                     }
             }, 
             {
@@ -59,6 +79,10 @@ angular
                 'data':{
                         id: 'n5',
                         name: '5',
+                    },
+                    position: {
+                        x: 570,
+                        y: 650
                     }
             }, 
             {
@@ -66,6 +90,10 @@ angular
                 'data':{
                         id: 'n6',
                         name: '6',
+                    },
+                    position: {
+                        x: 380,
+                        y: 650
                     }
             }, 
             {
@@ -73,6 +101,10 @@ angular
                 'data':{
                         id: 'n7',
                         name: '7',
+                    },
+                    position: {
+                        x: 190,
+                        y: 650
                     }
             }, 
             {
@@ -80,6 +112,10 @@ angular
                 'data':{
                         id: 'n8',
                         name: '8',
+                    },
+                    position: {
+                        x: 380,
+                        y: 325
                     }
             }, 
 

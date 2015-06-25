@@ -43,7 +43,7 @@ angular
 
                     $('#cy').cytoscape({
                         layout: {
-                            name: 'circle',
+                            name: 'preset',
                             fit: true, 
                             ready: undefined, 
                             stop: undefined, 
